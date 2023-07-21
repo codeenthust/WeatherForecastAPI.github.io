@@ -19,8 +19,8 @@ def format_response(weather):
     return string
 
 def get_weather(city):
-    key = "bd8d3ed3b1734e5bbea29fce537ab589"
-    url = "https://api.openweathermap.org/data/2.5/weather"
+    key = "$APIKEY"
+    url = " https://api.ambeedata.com/weather/history/by-lat-lng?lat=12&lng=77&from=2020-12-03 00:00:00&to=2020-12-04 00:00:00"
     params = {"APPID": key, "q": city, "units": "imperial"}
     response = requests.get(url, params=params)
     weather = response.json()
